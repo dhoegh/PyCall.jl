@@ -368,7 +368,7 @@ end
 
 #########################################################################
 
-typealias TypeTuple{N} Union(Type,NTuple{N, Type})
+typealias TypeTuple Union(Type,NTuple)
 
 function pycall(o::Union(PyObject,PyPtr), returntype::TypeTuple, args...; kwargs...)
     oargs = map(PyObject, args)
